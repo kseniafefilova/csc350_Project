@@ -1,0 +1,93 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: rgba(117,169,145,1); 
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(117,169,145,1);
+  padding: 20px;
+  text-align: center;
+}
+
+nav {
+  position: absolute;
+  top: 20px; /* Adjust the top position as needed */
+  left: 20px; /* Adjust the left position as needed */
+}
+
+header h1 {
+  font-size: 64px;
+  margin: 0;
+  color: #ffffff;
+  font-family: 'Abhaya Libre', sans-serif;
+}
+
+.we-eat {
+  color: #33703F; 
+  font-family: 'Abhaya Libre', serif; 
+}
+
+header h2 {
+  font-size: 24px;
+  margin: 0;
+  color: #ffffff;
+  font-family: 'Abhaya Libre', sans-serif;
+}
+
+nav {
+  text-align: left;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  display: block;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  text-decoration: none; 
+  color: #ffffff; 
+  font-family: 'Abhaya Libre', sans-serif; 
+  font-size: 40px; 
+}
+
+nav ul li a:hover {
+  color:#33703F;  
+}
+
+main {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: calc(100vh - 130px); 
+}
+
+footer {
+  background-color: rgba(117,169,145,1);
+  padding: 10px;
+  text-align: center;
+}
+
+.center-content {
+  text-align: center;
+}
+
+.motivational-phrases {
+  margin-top: 20px;
+  font-size: 35px;
+  color: #ffffff;
+}
+
