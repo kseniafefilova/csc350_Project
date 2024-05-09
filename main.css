@@ -87,7 +87,26 @@ footer {
 
 .motivational-phrases {
   margin-top: 20px;
-  font-size: 35px;
-  color: #ffffff;
+  font-size: 32px;
+  color: rgba(117,169,145,1);
+  position: relative;
+  z-index: 1;
 }
 
+.motivational-phrases p {
+  margin: 20px 0;
+  position: relative;
+  color: rgba(117,169,145,1); /* Change text color to white */
+}
+
+.motivational-phrases p::before {
+  content: '';
+  position: absolute;
+  top: -40%;
+  left: 40px; /* Adjust the position as needed */
+  width: 90%; /* Adjust the width as needed */
+  height: 80px;
+  background: #ffffff; /* Change background color to match text color */
+  border-radius: 50%;
+  z-index: -1;
+}
