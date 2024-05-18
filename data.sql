@@ -1,9 +1,10 @@
 CREATE TABLE Admin (
-                       AdminID INT PRIMARY KEY,
-                       FirstName VARCHAR(50),
-                       Email VARCHAR(50) UNIQUE,
-                       Password VARCHAR(50)
+                       AdminID INT AUTO_INCREMENT PRIMARY KEY,
+                       FirstName VARCHAR(50) NOT NULL,
+                       Email VARCHAR(50) UNIQUE NOT NULL,
+                       Password VARCHAR(255) NOT NULL
 );
+
 
 INSERT INTO Admin (AdminID, FirstName, Email, Password)
 VALUES
