@@ -6,12 +6,12 @@ CREATE TABLE Admin (
 );
 
 
-INSERT INTO Admin (AdminID, FirstName, Email, Password)
+INSERT INTO Admin ( FirstName, Email, Password)
 VALUES
-    (1, 'Florian', 'florian@gmail.com', 'Flo'),
-    (2, 'Meme', 'meme@gmail.com', 'Me'),
-    (3, 'Ksenia', 'ksenia@gmail.com', 'Ksen'),
-    (4, 'Halil', 'halil@gmail.com', 'Hal');
+    ( 'Florian', 'florian@gmail.com', 'Flo'),
+    ( 'Meme', 'meme@gmail.com', 'Me'),
+    ( 'Ksenia', 'ksenia@gmail.com', 'Ksen'),
+    ('Halil', 'halil@gmail.com', 'Hal');
 
 
 CREATE TABLE Meals (
