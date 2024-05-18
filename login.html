@@ -9,29 +9,100 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abhaya+Libre:500&display=swap">
     <title>Log In </title>
     <link rel="stylesheet" href="login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 </head>
 
-
 <body>
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <!-- Logo and Brand Name -->
+    <a class="navbar-brand" href="index.html">
+        <img src="images/9896be000c772770b2016f581fae0b83.jpg" alt="Logo" class="logoimage"></a>
+    <a class="navbar-brand" href="index.html">We Ea't</a>
+    <!-- Toggler button for small screens -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- Navbar links -->
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <input type="text" class="form-control" placeholder="Search.." style="margin-right: 10px;">
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="recipes.html">Recipes</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="register.html">Register</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="login.html">Login</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+        </ul>
+    </div>
+</nav>
 
-    <div class="login-container">
-        <h1 class="centered-title">WeEa't</h1>
-        <div class="form-container">
-            <h2 class="text-center">Login</h2>
-            <form action="login.php" method="post" class="login-form">
-                <div class="form-group">
-                    <label for="email" id>Email:</label>
-                    <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" required>
+<div class="login-container">
+    <div class="form-container">
+        <h2 class="text-center">Login</h2>
+        <form action="login.php" method="post" class="login-form">
+            <div class="form-group">
+                <label for="email" id>Email:</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="pwd">Password:</label>
+                <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Login</button>
+        </form>
+        <p class="text-center">Don't have an account? <a href="register.html">Register</a></p>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="text-center py-4">
+    <div class="container">
+        <!-- Single column to center everything -->
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+                <!-- Footer content -->
+                <h3>Follow Us</h3>
+                <ul class="list-inline">
+                    <!-- Social media icons -->
+                    <li class="list-inline-item"><i class="fab fa-facebook"></i></li>
+                    <li class="list-inline-item"><i class="fab fa-twitter"></i></li>
+                    <li class="list-inline-item"><i class="fab fa-instagram"></i></li>
+                    <li class="list-inline-item"><i class="fab fa-linkedin"></i></li>
+                    <li class="list-inline-item"><i class="fab fa-youtube"></i></li>
+                </ul>
+                <div class="list-unstyled">
+                    <!-- Footer links -->
+                    <a href="about.html">About Us</a> |
+                    <a href="contact.html">Contact Us</a> |
+                    <a href="#">Privacy Policy</a>
                 </div>
-                <div class="form-group">
-                    <label for="pwd">Password:</label>
-                    <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd" required>
-                </div>
-                <button type="submit" class="btn btn-primary">Login</button>
-            </form>
-            <p class="text-center">Don't have an account? <a href="register.html">Register</a></p>
+                <!-- Copyright information -->
+                <br/>
+                <p class="list-unstyled">&copy; 2024 We Ea't. All rights reserved.</p>
+            </div>
         </div>
     </div>
+</footer>
 
+<!-- Bootstrap and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.7.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

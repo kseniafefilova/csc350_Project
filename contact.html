@@ -6,13 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abhaya+Libre:500&display=swap">
-    <link rel="stylesheet" href="recipes.css">
-    <title>Recipes</title>
+    <link rel="stylesheet" href="contact.css">
+    <title>Contact Us</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
     <a class="navbar-brand" href="index.html">
         <img src="images/9896be000c772770b2016f581fae0b83.jpg" alt="Logo" class="logoimage">
     </a>
@@ -31,32 +32,47 @@
             <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
         </ul>
     </div>
+    </div>
 </nav>
 
-<main>
-    <section class="filter-form">
-        <h2>Find the Perfect Meals Based on Your Preferences</h2>
-        <form action="filter_recipes.php" method="GET">
-            <label for="carbsRange">Carbs (g):</label>
-            <input type="range" id="carbsRange" name="carbsRange" min="0" max="100" value="50" oninput="updateCarbsOutput(this.value)">
-            <output id="carbsOutput">50</output> g
-
-            <label for="cookTimeRange">Cook Time (mins):</label>
-            <input type="range" id="cookTimeRange" name="cookTimeRange" min="0" max="120" value="60" oninput="updateCookTimeOutput(this.value)">
-            <output id="cookTimeOutput">60</output> mins
-
-            <label for="proteinRange">Protein (g):</label>
-            <input type="range" id="proteinRange" name="proteinRange" min="0" max="100" value="50" oninput="updateProteinOutput(this.value)">
-            <output id="proteinOutput">50</output> g
-
-            <label for="priceRange">Price ($):</label>
-            <input type="range" id="priceRange" name="priceRange" min="0" max="20" value="10" oninput="updatePriceOutput(this.value)">
-            <output id="priceOutput">10</output> $
-
-            <input type="submit" value="Find Recipes">
-        </form>
-    </section>
-</main>
+<!-- Contact Section -->
+<div class="contact-section">
+    <div class="container">
+        <!-- Section title -->
+        <h2 class="text-center">Contact Us</h2>
+        <div class="row mt-5">
+            <!-- Contact Form -->
+            <div class="col-md-6 contact-form">
+                <form>
+                    <div class="form-group">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" class="form-control" id="fullName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea class="form-control" id="message" rows="5" required></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary">Contact Us</button>
+                    </div>
+                </form>
+            </div>
+            <!-- Contact Information -->
+            <div class="col-md-6 contact-info">
+                <p>weeat.global@gmail.com <br>
+                    123-616-5219
+                </p>
+                <h4>Based in</h4>
+                <p>199 Chambers Street, New York</p>
+                <img src="images/e8ed5a0b2ce42a11bb34258a5a5e5b0f.jpg" alt="Contact us image" class="img-fluid rounded">
+            </div>
+        </div>
+    </div>
+</div>
 
 <!-- Footer -->
 <footer class="text-center py-4">
@@ -64,7 +80,6 @@
         <!-- Single column to center everything -->
         <div class="row justify-content-center">
             <div class="col-md-12">
-                <!-- Footer content -->
                 <h3>Follow Us</h3>
                 <ul class="list-inline">
                     <!-- Social media icons -->
@@ -80,8 +95,8 @@
                     <a href="contact.html">Contact Us</a> |
                     <a href="#">Privacy Policy</a>
                 </div>
-                <!-- Copyright information -->
                 <br/>
+                <!-- Copyright information -->
                 <p class="list-unstyled">&copy; 2024 WeEa't. All rights reserved.</p>
             </div>
         </div>
@@ -92,20 +107,5 @@
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.7.0/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-<script>
-    function updateCarbsOutput(val) {
-        document.getElementById('carbsOutput').textContent = val;
-    }
-    function updateCookTimeOutput(val) {
-        document.getElementById('cookTimeOutput').textContent = val;
-    }
-    function updateProteinOutput(val) {
-        document.getElementById('proteinOutput').textContent = val;
-    }
-    function updatePriceOutput(val) {
-        document.getElementById('priceOutput').textContent = val;
-    }
-</script>
 </body>
 </html>
