@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link href="./main.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abhaya+Libre:500&display=swap">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WeEa't - Recipes</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abhaya+Libre:500&display=swap">
+    <link rel="stylesheet" href="recipes.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
-<body>
-    <header>
+<body style="padding-top: 20px;">
+<header>
+    <div class="header-container">
         <h1>Welcome to <span class="we-eat">WeEa't</span></h1>
         <h2>Affordable & Healthy Food for Students</h2>
         <nav>
@@ -18,14 +20,53 @@
                 <li><a href="about.html">About</a></li>
             </ul>
         </nav>
-    </header>
+    </div>
+</header>
 
-    <main>
-        <!-- Main content of your recipes page goes here -->
-    </main>
+<main>
+    <section class="filter-form">
+        <h2>Find the Perfect Meals Based on Your Preferences</h2>
+        <form action="filter_recipes.php" method="GET">
+            <label for="carbsRange">Carbs (g):</label>
+            <input type="range" id="carbsRange" name="carbsRange" min="0" max="100" value="50" oninput="updateCarbsOutput(this.value)">
+            <output id="carbsOutput">50</output> g
 
-    <footer>
-        <p>&copy; 2024 WeEa't</p>
-    </footer>
+            <label for="cookTimeRange">Cook Time (mins):</label>
+            <input type="range" id="cookTimeRange" name="cookTimeRange" min="0" max="120" value="60" oninput="updateCookTimeOutput(this.value)">
+            <output id="cookTimeOutput">60</output> mins
+
+            <label for="proteinRange">Protein (g):</label>
+            <input type="range" id="proteinRange" name="proteinRange" min="0" max="100" value="50" oninput="updateProteinOutput(this.value)">
+            <output id="proteinOutput">50</output> g
+
+            <label for="priceRange">Price ($):</label>
+            <input type="range" id="priceRange" name="priceRange" min="0" max="20" value="10" oninput="updatePriceOutput(this.value)">
+            <output id="priceOutput">10</output> $
+
+            <input type="submit" value="Find Recipes">
+        </form>
+    </section>
+
+
+</main>
+
+<footer>
+    <p>&copy; 2024 WeEa't</p>
+</footer>
+
+<script>
+    function updateCarbsOutput(val) {
+        document.getElementById('carbsOutput').textContent = val;
+    }
+    function updateCookTimeOutput(val) {
+        document.getElementById('cookTimeOutput').textContent = val;
+    }
+    function updateProteinOutput(val) {
+        document.getElementById('proteinOutput').textContent = val;
+    }
+    function updatePriceOutput(val) {
+        document.getElementById('priceOutput').textContent = val;
+    }
+</script>
 </body>
 </html>
