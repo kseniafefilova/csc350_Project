@@ -21,8 +21,27 @@
     </header>
 
     <main>
-        <!-- Main content of your recipes page goes here -->
+        <form action="search.php" method="POST" class="filter-container">
+            <label for="budget">Budget:</label>
+            <select id="budget" name="budget">
+                <option value="0-3">0 - 3 USD</option>
+                <option value="3-5">3 - 5 USD</option>
+                <option value="5-7">5 - 7 USD</option>
+                <option value="7-10">7 - 10 USD</option>
+            </select>
+    
+            <label for="calories">Calories:</label>
+            <select id="calories" name="calories">
+                <option value="0-200">0 - 200 kcal</option>
+                <option value="200-400">200 - 400 kcal</option>
+                <option value="400-600">400 - 600 kcal</option>
+                <option value="600-800">600 - 800 kcal</option>
+            </select>
+    
+            <button type="submit" id="search">Search</button>
+        </form>
     </main>
+    
 
     <footer>
         <p>&copy; 2024 WeEa't</p>
