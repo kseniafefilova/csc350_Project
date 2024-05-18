@@ -29,72 +29,33 @@ body {
     margin-left: 10px; /* Left margin */
 }
 
-
-
-.login-container {
-    margin-top: 100px;
-    width: 100%; /* Set width to 100% */
-    max-width: 500px;
-    padding: 20px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0);
-    border-radius: 10px;
-    background-color: #ffffff;
-    margin: 0 auto; /* Center the form horizontally */
+/* Header styling for about section */
+.about-header {
+    background-color: #D3E8D1; /* Background color */
+    padding-bottom: 0; /* Bottom padding */
+    margin-bottom: 40px; /* Bottom margin */
 }
 
-.centered-title {
-    text-align: center;
-    margin-bottom: 20px;
-    color: rgba(117,169,145,1);
+/* Content styling for about section */
+.about-content h2 {
+    font-family: 'Montserrat', sans-serif; /* Font */
+    color: #333; /* Text color */
+    font-weight: 700; /* Font weight */
 }
 
-.form-container {
-    margin-top: 20px;
+.about-content p {
+    font-family: 'Open Sans', sans-serif; /* Font */
+    color: #555; /* Text color */
 }
 
-.login-form .form-group {
-    margin-bottom: 20px;
+/* Image responsiveness styling */
+.img-fluid {
+    max-width: 70%; /* Maximum width */
+    height: auto; /* Automatically adjust height */
+    float: right; /* Float the image to the right */
+    margin-left: 20px;
 }
 
-.login-form .form-group label {
-    font-weight: bold;
-    color: rgba(117,169,145,1);
-}
-
-.login-form .form-group input {
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid rgba(117,169,145,1);
-}
-
-.login-form .form-group input:hover,
-.login-form .form-group input:focus {
-    border-color: #33703F;
-}
-
-.btn-primary {
-    background-color: rgba(117,169,145,1);
-    border: none;
-    color: #ffffff;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-.btn-primary {
-    background-color: rgba(117, 169, 145, 1); /* Soft green button */
-    border: none; /* No border for a cleaner look */
-    color: #ffffff; /* White text for contrast */
-    padding: 10px 20px; /* Padding for comfort */
-    border-radius: 5px; /* Rounded corners */
-    cursor: pointer; /* Pointer cursor on hover */
-    transition: background-color 0.3s ease; /* Smooth transition for hover */
-    margin: 0 auto; /* Center align the button */
-    display: block; /* Make the button a block element */
-}
-.btn-primary:hover {
-    background-color: #33703F;
-}
 /* Footer styling */
 footer {
     font-family: 'Open Sans', sans-serif; /* Font */
