@@ -1,65 +1,18 @@
-/* Body styling */
-body {
-    background: #D3E8D1 url('images/food.jpeg') no-repeat center center fixed; /* Fallback background color and image */
-    background-size: cover; /* Ensures the background image covers the entire page */
-    color: #333; /* Text color */
-    font-family: 'Open Sans', sans-serif; /* Font */
-}
-
-/* Navbar styling */
-.navbar {
-    background-color: #FFFFFF; /* White background */
+body, html {
+    background-image: linear-gradient(to right,darkgreen, lightgreen);
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding: 10px 20px; /* Maintain padding for alignment */
-    border-bottom: 1px solid #E0E0E0; /* Optional: subtle line for separation */
-}
-.navbar-nav input {
-    background-color: #D3E8D1; /* Background color */
-}
-
-.navbar-brand {
-    display: flex;
-    align-items: center;
-    color: #000;
-    font-weight: bold;
-    font-family: 'Montserrat', sans-serif;
-    text-decoration: none;
-    margin-right: 20px; /* Space between logo and nav items */
-}
-
-.logoimage {
-    height: 90px; /* Adjust logo size */
-    width: auto;
-    margin-right: 10px;
-}
-
-/* Navbar links styling */
-.navbar-nav {
-    display: flex;
-    align-items: center;
-    list-style: none;
-}
-.nav-link {
-    color: #333;
-    padding: 10px 15px;
-    text-decoration: none;
-}
-
-.nav-link:hover {
-    text-decoration: underline;
 }
 
 .login-container {
     margin-top: 100px;
-    width: 100%; /* Set width to 100% */
+    width: 150%;
     max-width: 500px;
     padding: 20px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Added shadow */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0);
     border-radius: 10px;
     background-color: #ffffff;
-    margin: 0 auto; /* Center the form horizontally */
 }
 
 .centered-title {
@@ -101,61 +54,7 @@ body {
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
-.btn-primary {
-    background-color: rgba(117, 169, 145, 1); /* Soft green button */
-    border: none; /* No border for a cleaner look */
-    color: #ffffff; /* White text for contrast */
-    padding: 10px 20px; /* Padding for comfort */
-    border-radius: 5px; /* Rounded corners */
-    cursor: pointer; /* Pointer cursor on hover */
-    transition: background-color 0.3s ease; /* Smooth transition for hover */
-    margin: 0 auto; /* Center align the button */
-    display: block; /* Make the button a block element */
-}
+
 .btn-primary:hover {
     background-color: #33703F;
-}
-
-/* Footer styling */
-footer {
-    font-family: 'Open Sans', sans-serif; /* Font */
-    background-color: whitesmoke; /* Background color */
-    color: black; /* Text color */
-    padding: 20px 0; /* Padding */
-    text-align: center; /* Center align text */
-}
-
-/* Styling for lists in the footer */
-footer .list-inline {
-    margin-bottom: 20px; /* Bottom margin */
-    padding-left: 0; /* Left padding */
-}
-
-footer .list-inline-item {
-    margin-right: 10px; /* Right margin */
-    display: inline-block; /* Display inline */
-}
-
-footer .list-unstyled {
-    color: black; /* Text color */
-    padding-left: 0; /* Left padding */
-}
-
-footer .list-unstyled a {
-    color: inherit; /* Inherit color */
-    margin: 0 5px; /* Margin */
-}
-
-/* Social media icon styling */
-.fab {
-    padding: 20px; /* Padding */
-    font-size: 30px; /* Font size */
-    width: 50px; /* Width */
-    text-align: center; /* Center align text */
-    text-decoration: none; /* Remove underline */
-}
-
-/* Hover effect for social media icons */
-.fab:hover {
-    opacity: 0.7; /* Opacity on hover */
 }

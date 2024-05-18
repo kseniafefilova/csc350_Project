@@ -1,54 +1,45 @@
-/* Body styling */
 body {
-    background: url('images/our-guide-to-cowboy-approved-cowboy-salads-stopmotion-frame-002-1652302777.jpg') no-repeat center center fixed;
-    background-size: cover; /* Cover the entire page */
-    color: #333; /* Text color */
-    font-family: 'Open Sans', sans-serif; /* Font */
-}
-
-/* Navbar styling */
-.navbar {
-    background-color: #FFFFFF; /* White background */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px; /* Maintain padding for alignment */
-    border-bottom: 1px solid #E0E0E0; /* Optional: subtle line for separation */
-}
-.navbar-nav input {
-    background-color: #D3E8D1; /* Background color */
-}
-
-.navbar-brand {
-    display: flex;
-    align-items: center;
-    color: #000;
-    font-weight: bold;
-    font-family: 'Montserrat', sans-serif;
-    text-decoration: none;
-    margin-right: 20px; /* Space between logo and nav items */
-}
-
-.logoimage {
-    height: 90px; /* Adjust logo size */
-    width: auto;
-    margin-right: 10px;
-}
-
-/*Navbar links styling*/
-.navbar-nav {
-    display: flex;
-    align-items: center;
-    list-style: none;
-}
-.nav-link {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
     color: #333;
-    padding: 10px 15px;
-    text-decoration: none;
 }
 
-.nav-link:hover {
-    text-decoration: underline;
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    height: 100px;
+}
+
+.header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 main {
@@ -58,7 +49,7 @@ main {
 .filter-form {
     margin: 20px auto;
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.9); /* White background with slight transparency */
+    background-color: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     max-width: 600px;
     border-radius: 8px;
@@ -82,7 +73,7 @@ main {
     margin-top: 5px;
 }
 
-filter-form output {
+.filter-form output {
     font-size: 18px;
     color: #4CAF50;
 }
@@ -161,12 +152,12 @@ filter-form output {
     gap: 5px;
 }
 
-recipe-info img {
+.recipe-info img {
     width: 20px;
     height: 20px;
 }
 
-recipe-item a {
+.recipe-item a {
     display: inline-block;
     margin-top: 10px;
     padding: 10px 15px;
@@ -176,51 +167,17 @@ recipe-item a {
     border-radius: 4px;
 }
 
-recipe-item a:hover {
+.recipe-item a:hover {
     background-color: #45a049;
 }
 
-/* Footer styling */
 footer {
-    font-family: 'Open Sans', sans-serif; /* Font */
-    background-color: whitesmoke; /* Background color */
-    color: black; /* Text color */
-    padding: 20px 0; /* Padding */
-    text-align: center; /* Center align text */
-    margin-top: 30px; /* Add margin-top to move it down */
-}
-
-/* Styling for lists in the footer */
-footer .list-inline {
-    margin-bottom: 20px; /* Bottom margin */
-    padding-left: 0; /* Left padding */
-}
-
-footer .list-inline-item {
-    margin-right: 10px; /* Right margin */
-    display: inline-block; /* Display inline */
-}
-
-footer .list-unstyled {
-    color: black; /* Text color */
-    padding-left: 0; /* Left padding */
-}
-
-footer .list-unstyled a {
-    color: inherit; /* Inherit color */
-    margin: 0 5px; /* Margin */
-}
-
-/* Social media icon styling */
-.fab {
-    padding: 20px; /* Padding */
-    font-size: 30px; /* Font size */
-    width: 50px; /* Width */
-    text-align: center; /* Center align text */
-    text-decoration: none; /* Remove underline */
-}
-
-/* Hover effect for social media icons */
-.fab:hover {
-    opacity: 0.7; /* Opacity on hover */
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    z-index: 1000;
 }

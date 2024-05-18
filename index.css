@@ -30,7 +30,6 @@ body {
 
 .logoimage {
     height: 90px; /* Adjust logo size */
-    width: auto;
     margin-right: 10px;
 }
 
@@ -49,37 +48,7 @@ body {
 .nav-link:hover {
     text-decoration: underline;
 }
-
-/* Styling for carousel caption */
-.carousel-caption {
-    background-color: rgba(255, 255, 255, 0.5); /* Background color with transparency */
-    border-radius: 10px; /* Border radius */
-    padding: 20px; /* Padding */
 }
-
-/* Styling for text inside carousel caption */
-.carousel-caption .display-4,
-.carousel-caption .lead {
-    color: #333; /* Text color */
-}
-
-/* Styling for hero section carousel */
-.hero-section .carousel {
-    position: fixed; /* Fixed position */
-    top: 0; /* Align to top */
-    left: 0; /* Align to left */
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    z-index: -1; /* Behind the text */
-}
-
-/* Styling for hero section */
-.hero-section {
-    padding-top: 80px; /* Top padding */
-    position: center; /* Center position */
-    min-height: 75vh; /* Minimum height */
-    color: white; /* Text color */
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Text shadow */
 }
 
 /* Footer styling */
@@ -89,7 +58,6 @@ footer {
     color: black; /* Text color */
     padding: 20px 0; /* Padding */
     text-align: center; /* Center align text */
-    margin-top: 30px; /* Add margin-top to move it down */
 }
 
 /* Styling for lists in the footer */

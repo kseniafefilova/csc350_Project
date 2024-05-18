@@ -1,109 +1,40 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./main.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abhaya+Libre:500&display=swap">
-    <link rel="stylesheet" href="index.css">
-    <title>Index</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeEa't</title>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="index.html">
-        <img src="images/9896be000c772770b2016f581fae0b83.jpg" alt="Logo" class="logoimage">
-    </a>
-    <a class="navbar-brand" href="index.html">We Ea't</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav">
-            <li class="nav-item"><input type="text" class="form-control" placeholder="Search.." style="margin-right: 10px;"></li>
-            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="recipes.html">Recipes</a></li>
-            <li class="nav-item"><a class="nav-link" href="register.html">Register</a></li>
-            <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
-            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-        </ul>
-    </div>
-</nav>
-<!-- Hero section with carousel -->
-<header class="hero-section">
-    <!-- Carousel -->
-    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
-            <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
-            <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
-            <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></li>
-        </ol>
-        <!-- Slides -->
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="images/food.jpeg" class="d-block w-100" alt="Photo">
-            </div>
-            <div class="carousel-item">
-                <img src="images/cooking-class-culinary-food-people.jpg" class="d-block w-100" alt="Photo">
-            </div>
-            <div class="carousel-item">
-                <img src="images/our-guide-to-cowboy-approved-cowboy-salads-stopmotion-frame-002-1652302777.jpg" class="d-block w-100" alt="Photo">
+    <header>
+        
+        <h1>Welcome to <span class="we-eat">WeEa't</span></h1>
+        <h2>Affordable & Healthy Food for Students</h2>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="recipes.html">Recipes</a></li>
+                <li><a href="about.html">About</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="center-content">
+            <img src="food.jpeg" alt="Image">
+            <div class="motivational-phrases">
+                <p>Stay healthy and energized!</p>
+                <p>Transform your kitchen into a wellness sanctuary.</p>
+                <p>Explore new flavors and ingredients.</p>
             </div>
         </div>
-        <!-- Controls -->
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </a>
-    </div>
-</header>
-<!-- Text overlay -->
-<div class="carousel-caption ">
-    <div>
-        <h1 class="display-4">Stay healthy and energized!</h1>
-        <p class="lead">Transform your kitchen into a wellness sanctuary.
-            Explore new flavors and ingredients.
-        </p>
-        <a href="recipes.html" class="btn btn-primary" style="background-color: rgba(0, 0, 0, 0.5); border: none;">Explore Our Food Recipes</a>
-    </div>
-</div>
+    </main>
 
-
-
-<!-- Footer -->
-<footer class="text-center py-4">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-12">
-                <h3>Follow Us</h3>
-                <ul class="list-inline">
-                    <li class="list-inline-item"><i class="fab fa-facebook"></i></li>
-                    <li class="list-inline-item"><i class="fab fa-twitter"></i></li>
-                    <li class="list-inline-item"><i class="fab fa-instagram"></i></li>
-                    <li class="list-inline-item"><i class="fab fa-linkedin"></i></li>
-                    <li class="list-inline-item"><i class="fab fa-youtube"></i></li>
-                </ul>
-                <div class="list-unstyled">
-                    <a href="about.html">About Us</a> |
-                    <a href="contact.html">Contact Us</a> |
-                    <a href="#">Privacy Policy</a>
-                </div>
-                <p class="list-unstyled">&copy; 2024 WeEa't. All rights reserved.</p>
-            </div>
-        </div>
-    </div>
-</footer>
-
-<!-- Bootstrap and jQuery -->
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+    <footer>
+        <p>&copy; 2024 WeEa't </p>
+    </footer>
 </body>
 </html>
