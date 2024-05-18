@@ -1,0 +1,185 @@
+/* CSS for a Review page */
+.leave-review-heading {
+    color: #ffffff;
+    font-family: 'Abhaya Libre', serif;
+    font-size: 32px;
+    margin-top: 500px;  
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px; 
+}
+
+.input-container input,
+.input-container textarea {
+    width: 100%; 
+    padding: 8px 15px; 
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 18px; 
+    font-family: 'Abhaya Libre', serif;
+}
+
+#reviewForm {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex; 
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start; 
+}
+
+label {
+    margin-bottom: 5px;
+    font-family: 'Abhaya Libre', serif;
+}
+
+select {
+    width: 100%; 
+    padding: 8px 15px; 
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 18px; 
+    font-family: 'Abhaya Libre', serif;
+}
+
+#reviewForm input,
+#reviewForm textarea,
+#reviewForm select,
+#reviewForm button {
+    display: block;
+    width: 100%;
+    padding: 8px 15px; 
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 18px; 
+    font-family: 'Abhaya Libre', serif;
+}
+
+#reviewForm input:focus,
+#reviewForm textarea:focus,
+#reviewForm select:focus,
+#reviewForm button:focus {
+    border-color: rgba(117,169,145,1);
+    box-shadow: 0 0 4px rgba(117,169,145,1);
+    outline: none;
+}
+
+#reviewForm button {
+    background-color: rgba(117,169,145,1);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100px;
+    margin: 0 auto;
+}
+
+#reviewForm button:hover {
+    background-color: #33703F;
+}
+
+#reviews {
+    margin-top: 30px;
+    max-width: 1000px; 
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#reviews h2 {
+    color: #ffffff; 
+    font-family: 'Abhaya Libre', serif;
+    font-size: 40px; 
+    margin-top: -30px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#reviews article {
+    border: 1px solid #33703F;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s ease;
+}
+
+#reviews article:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#reviews h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 24px;
+    color: #33703F;
+    font-family: 'Abhaya Libre', serif;
+}
+
+#reviews small {
+    font-style: italic;
+    color: #33703F;
+}
+
+.review-message {
+    background-color: #dff0d8; 
+    color: #3c763d; 
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #d6e9c6; 
+    border-radius: 4px;
+    max-width: 900px;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+/* Alert message at the top */
+.alert-message {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #dff0d8; 
+    color: #3c763d; 
+    padding: 10px;
+    border: 1px solid #d6e9c6; 
+    border-radius: 4px;
+    z-index: 1000;
+    width: 50%;
+    text-align: center;
+    font-size: 30px;
+}
+
+@media (max-width: 768px) {
+    #reviewForm,
+    #reviews article {
+        padding: 15px;
+    }
+
+    #reviewForm input,
+    #reviewForm textarea,
+    #reviewForm select,
+    #reviewForm button {
+        font-size: 14px;
+    }
+
+    #reviews h3 {
+        font-size: 20px;
+    }
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WeEa't - Reviews</title>
+    <link href="main.css" rel="stylesheet">
+    <link href="reviews.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abhaya+Libre:500&display=swap">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Welcome to <span class="we-eat">WeEa't</span></h1>
+        <h2>Affordable & Healthy Food for Students</h2>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="recipes.html">Recipes</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Alert message container -->
+    <div id="alertMessage" class="alert-message" style="display: none;"></div>
+
+    <main>
+        <h2 class="leave-review-heading">Leave Your Review</h2>
+        <form id="reviewForm" method="POST" action="submit_review.php">
+            <div class="input-container">
+                <input type="text" name="name" placeholder="Your name" required>
+            </div>
+            <div class="input-container">
+                <textarea name="review" placeholder="Your review" required></textarea>
+            </div>
+            <label for="rating">Rating:</label>
+            <select name="rating" id="rating" required>
+                <option value="5">5 - Excellent</option>
+                <option value="4">4 - Very Good</option>
+                <option value="3">3 - Good</option>
+                <option value="2">2 - Fair</option>
+                <option value="1">1 - Poor</option>
+            </select>
+            <button type="submit">Submit</button>
+        </form>
+        
+        <section id="reviews">
+            <h2>Reviews</h2>
+            <div id="reviewsList"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 WeEa't</p>
+    </footer>
+
+    <!-- JavaScript for handling form submission and loading reviews -->
+    <script>
+        $(document).ready(function() {
+            function loadReviews() {
+                $.get('fetch_reviews.php', function(data) {
+                    $('#reviewsList').html(data);
+                }).fail(function(xhr) {
+                    alert('Error: ' + xhr.status);
+                });
+            }
+
+            loadReviews();
+
+            $('#reviewForm').on('submit', function(event) {
+                event.preventDefault();
+                
+                $.ajax({
+                    url: 'submit_review.php',
+                    type: 'POST',
+                    data: $(this).serialize(),
+                    success: function(response) {
+                        $('#alertMessage').html(response).fadeIn();
+
+                        $('#reviewForm')[0].reset();
+                        loadReviews();
+
+                        setTimeout(function() {
+                            $('#alertMessage').fadeOut();
+                        }, 3000);
+                    },
+                    error: function(xhr) {
+                        alert('Error: ' + xhr.status);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
