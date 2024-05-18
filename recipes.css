@@ -1,0 +1,68 @@
+/* New modern styles */
+body {
+    font-family: 'Abhaya Libre', serif;
+}
+
+header {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+main {
+    padding: 2rem;
+    max-width: 800px;
+    margin: auto;
+}
+
+.filter-container {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    justify-content: center;
+}
+
+label {
+    align-self: center;
+    font-weight: bold;
+    color: #333;
+}
+
+select {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 1rem;
+    color: #333;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+select:hover, select:focus {
+    border-color: #e74c3c;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button#search {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    background-color: #e74c3c;
+    color: white;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+button#search:hover {
+    background-color: #c0392b;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: #ffffff; /* Ensure text in footer is white */
+}
