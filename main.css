@@ -1,8 +1,10 @@
+/* Base styles for all pages */
 body, html {
   margin: 0;
   padding: 0;
   height: 100%;
   background-color: rgba(117,169,145,1); 
+  font-family: 'Abhaya Libre', serif;
 }
 
 header {
@@ -11,18 +13,28 @@ header {
   left: 0;
   width: 100%;
   background-color: rgba(117,169,145,1);
-  padding: 20px;
+  padding: 10px;
   text-align: center;
+  z-index: 1000; /* Ensure header stays on top */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 nav {
   position: absolute;
   top: 20px; /* Adjust the top position as needed */
   left: 20px; /* Adjust the left position as needed */
+  text-align: left;
 }
 
 header h1 {
   font-size: 64px;
+  margin: 0;
+  color: #ffffff;
+  font-family: 'Abhaya Libre', sans-serif;
+}
+
+header h2 {
+  font-size: 24px;
   margin: 0;
   color: #ffffff;
   font-family: 'Abhaya Libre', sans-serif;
@@ -33,17 +45,6 @@ header h1 {
   font-family: 'Abhaya Libre', serif; 
 }
 
-header h2 {
-  font-size: 24px;
-  margin: 0;
-  color: #ffffff;
-  font-family: 'Abhaya Libre', sans-serif;
-}
-
-nav {
-  text-align: left;
-}
-
 nav ul {
   list-style-type: none;
   padding: 0;
@@ -51,7 +52,7 @@ nav ul {
 }
 
 nav ul li {
-  display: block;
+  display: inline-block;
   margin-right: 20px;
 }
 
@@ -59,26 +60,37 @@ nav ul li a {
   text-decoration: none; 
   color: #ffffff; 
   font-family: 'Abhaya Libre', sans-serif; 
-  font-size: 40px; 
+  font-size: 20px; 
 }
 
 nav ul li a:hover {
-  color:#33703F;  
+  color: #33703F;  
 }
 
 main {
-  margin-top: 100px;
+  padding-top: 200px; /* Adjust space for header */
+  padding-bottom: 100px; /* Adjust space for footer */
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: calc(100vh - 130px); 
+  min-height: calc(100vh - 300px); /* Ensure main takes full height minus header and footer */
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
 }
 
 footer {
   background-color: rgba(117,169,145,1);
-  padding: 10px;
+  padding: 20px;
   text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Ensure footer stays on top */
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+  color: #ffffff; /* Ensure text in footer is white */
 }
 
 .center-content {
@@ -109,4 +121,101 @@ footer {
   background: #ffffff; /* Change background color to match text color */
   border-radius: 50%;
   z-index: -1;
+}
+
+/* Specific styles for the filter form */
+.filter-container {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  justify-content: center;
+}
+
+label {
+  align-self: center;
+  font-weight: bold;
+  color: #333;
+}
+
+select {
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 1rem;
+  color: #333;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+select:hover, select:focus {
+  border-color: #e74c3c;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button#search {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  background-color: #e74c3c;
+  color: white;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+button#search:hover {
+  background-color: #c0392b;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.results-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.meal {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: calc(33.333% - 1rem);
+  box-sizing: border-box;
+}
+
+.meal img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.meal h2 {
+  margin-top: 0.5rem;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.meal p {
+  margin: 0.5rem 0;
+  color: #555;
+}
+
+.meal a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #e74c3c;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.meal a:hover {
+  background-color: #c0392b;
 }
