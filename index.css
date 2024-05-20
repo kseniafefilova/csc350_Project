@@ -1,8 +1,8 @@
+/* Overall body styling */
 body {
-    background: #D3E8D1 url('images/food.jpeg') no-repeat center center fixed; /* Fallback background color and image */
-    background-size: cover; /* Ensures the background image covers the entire page */
-    color: #333; /* Text color */
-    font-family: 'Open Sans', sans-serif; /* Font */
+    background-color: #D3E8D1; /* Soft green background */
+    color: #333;
+    font-family: 'Open Sans', sans-serif;
 }
 
 /* Navbar styling */
@@ -12,7 +12,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px; /* Maintain padding for alignment */
-    border-bottom: 1px solid #E0E0E0; /* Optional: subtle line for separation */
+    border-bottom: 1px solid #E0E0E0;/* Optional: subtle line for separation */
 }
 .navbar-nav input {
     background-color: #D3E8D1; /* Background color */
@@ -30,14 +30,12 @@ body {
 
 .logoimage {
     height: 90px; /* Adjust logo size */
-    width: auto;
     margin-right: 10px;
 }
 
-/* Navbar links styling */
+/*Navbar links styling*/
 .navbar-nav {
     display: flex;
-    justify-content: center;
     align-items: center;
     list-style: none;
 }
@@ -51,37 +49,49 @@ body {
     text-decoration: underline;
 }
 
-/* Centering the login form */
-.login-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: calc(100vh - 56px); /* Full viewport height minus navbar height */
+/* Styling for carousel caption */
+.carousel-caption {
+    background-color: rgba(255, 255, 255, 0.5); /* Background color with transparency */
+    border-radius: 10px; /* Border radius */
+    padding: 20px; /* Padding */
 }
 
-.form-container {
-    width: 100%;
-    max-width: 500px;
-    padding: 20px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Added shadow */
-    border-radius: 10px;
-    background-color: #ffffff;
+/* Styling for text inside carousel caption */
+.carousel-caption .display-4,
+.carousel-caption .lead {
+    color: #333; /* Text color */
 }
 
-.btn-primary {
-    background-color: rgba(117, 169, 145, 1); /* Soft green button */
-    border: none; /* No border for a cleaner look */
-    color: #ffffff; /* White text for contrast */
-    padding: 10px 20px; /* Padding for comfort */
-    border-radius: 5px; /* Rounded corners */
-    cursor: pointer; /* Pointer cursor on hover */
-    transition: background-color 0.3s ease; /* Smooth transition for hover */
-    display: block; /* Make the button a block element */
-    margin: 0 auto; /* Center align the button */
+/* Styling for hero section carousel */
+.hero-section .carousel {
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
 }
 
-.btn-primary:hover {
-    background-color: #33703F;
+.hero-section {
+    padding-top: 80px; /* Top padding */
+    height: 100vh; /* Adjust the height as needed */
+    color: white; /* Text color */
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Text shadow */
+}
+
+/* Carousel item images */
+.carousel-item img {
+    object-fit: cover; /* Cover the entire viewport */
+    height: 100vh; /* Full viewport height */
+}
+
+/* Custom button styling */
+.custom-btn {
+    background-color: #D3E8D1 !important; /* Button background color */
+    border-color: #D3E8D1 !important; /* Button border color */
+    color: red !important; /* Button text color */
+}
+
+.custom-btn:hover {
+    background-color: #b5d0b4 !important; /* Button background color on hover */
+    border-color: #b5d0b4 !important; /* Button border color on hover */
+    color: #333 !important; /* Button text color on hover */
 }
 
 /* Footer styling */
@@ -91,6 +101,9 @@ footer {
     color: black; /* Text color */
     padding: 20px 0; /* Padding */
     text-align: center; /* Center align text */
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
 
 /* Styling for lists in the footer */
@@ -126,4 +139,9 @@ footer .list-unstyled a {
 /* Hover effect for social media icons */
 .fab:hover {
     opacity: 0.7; /* Opacity on hover */
+}
+
+/* Ensure footer doesn't overlap with carousel */
+.carousel {
+    margin-bottom: 60px; /* Space between carousel and footer */
 }

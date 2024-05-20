@@ -13,12 +13,13 @@ header {
   background-color: rgba(117,169,145,1);
   padding: 20px;
   text-align: center;
+  z-index: 100; 
 }
 
 nav {
   position: absolute;
-  top: 20px; /* Adjust the top position as needed */
-  left: 20px; /* Adjust the left position as needed */
+  top: 20px;
+  left: 20px;
 }
 
 header h1 {
@@ -63,7 +64,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color:#33703F;  
+  color: #33703F;  
 }
 
 main {
@@ -76,9 +77,14 @@ main {
 }
 
 footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
   background-color: rgba(117,169,145,1);
   padding: 10px;
   text-align: center;
+  z-index: 100; 
 }
 
 .center-content {
@@ -96,17 +102,17 @@ footer {
 .motivational-phrases p {
   margin: 20px 0;
   position: relative;
-  color: rgba(117,169,145,1); /* Change text color to white */
+  color: rgba(117,169,145,1);
 }
 
 .motivational-phrases p::before {
   content: '';
   position: absolute;
   top: -40%;
-  left: 40px; /* Adjust the position as needed */
-  width: 90%; /* Adjust the width as needed */
+  left: 40px;
+  width: 90%;
   height: 80px;
-  background: #ffffff; /* Change background color to match text color */
+  background: #ffffff;
   border-radius: 50%;
   z-index: -1;
 }

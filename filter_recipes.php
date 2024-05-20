@@ -1,3 +1,32 @@
+<?php
+
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "csc350";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+$carbsRange = $_GET['carbsRange'];
+$cookTimeRange = $_GET['cookTimeRange'];
+$proteinRange = $_GET['proteinRange'];
+$priceRange = $_GET['priceRange'];
+
+$sql = "SELECT * FROM Meals 
+        WHERE CarbsCount <= ? 
+        AND CookTime <= ? 
+        AND ProteinCount <= ? 
+        AND MealPrice <= ?";
+$stmt = $conn->prepare($sql);
+$stmt->bind_param("dddd", $carbsRange, $cookTimeRange, $proteinRange, $priceRange);
+$stmt->execute();
+$result = $stmt->get_result();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +35,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abhaya+Libre:500&display=swap">
-    <link rel="stylesheet" href="recipes.css">
+    <link rel="stylesheet" href="filter_recipes.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <title>Recipes</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
@@ -36,28 +65,31 @@
         </div>
     </nav>
 
-    <main class="flex-grow-1 d-flex justify-content-center align-items-center">
-        <section class="filter-form">
-            <h2>Find the Perfect Meals Based on Your Preferences</h2>
-            <form action="filter_recipes.php" method="GET">
-                <label for="carbsRange">Carbs (g):</label>
-                <input type="range" id="carbsRange" name="carbsRange" min="0" max="100" value="50" oninput="updateCarbsOutput(this.value)">
-                <output id="carbsOutput">50 </output>g
-
-                <label for="cookTimeRange">Cook Time (mins):</label>
-                <input type="range" id="cookTimeRange" name="cookTimeRange" min="0" max="120" value="60" oninput="updateCookTimeOutput(this.value)">
-                <output id="cookTimeOutput">60 </output>mins
-
-                <label for="proteinRange">Protein (g):</label>
-                <input type="range" id="proteinRange" name="proteinRange" min="0" max="100" value="50" oninput="updateProteinOutput(this.value)">
-                <output id="proteinOutput">50 </output>g
-
-                <label for="priceRange">Price ($):</label>
-                <input type="range" id="priceRange" name="priceRange" min="0" max="20" value="10" oninput="updatePriceOutput(this.value)">
-                <output id="priceOutput">10 </output>$
-
-                <input type="submit" value="Find Recipes">
-            </form>
+    <main>
+        <section class="recipe-list">
+            <?php
+            if ($result->num_rows > 0) {
+                while ($row = $result->fetch_assoc()) {
+                    echo "<article class='recipe-item'>";
+                    echo "<h3>" . $row["MealName"] . "</h3>";
+                    echo "<img src='" . $row["MealImage"] . "' alt='" . $row["MealName"] . "' class='meal-image'>";
+                    echo "<p class='description'>" . $row["MealDescription"] . "</p>";
+                    echo "<div class='recipe-info'>";
+                    echo "<div><img src='icons/protein.jpeg' alt='Protein icon'><span>" . $row["ProteinCount"] . "g Protein</span></div>";
+                    echo "<div><img src='icons/carbs.jpeg' alt='Carbs icon'><span>" . $row["CarbsCount"] . "g Carbs</span></div>";
+                    echo "<div><img src='icons/calories.jpeg' alt='Calories icon'><span>" . $row["CaloriesCount"] . "kcal</span></div>";
+                    echo "<div><img src='icons/time.png' alt='Cook time icon'><span>" . $row["CookTime"] . " mins</span></div>";
+                    echo "<div><img src='icons/price.jpeg' alt='Price icon'><span>$" . $row["MealPrice"] . "</span></div>";
+                    echo "</div>";
+                    echo "<a href='" . $row["MealRecipe"] . "' target='_blank'>View Recipe</a>";
+                    echo "</article>";
+                }
+            } else {
+                echo "<p>No recipes found matching your criteria.</p>";
+            }
+            $stmt->close();
+            $conn->close();
+            ?>
         </section>
     </main>
 
@@ -95,20 +127,5 @@
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.7.0/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-<script>
-    function updateCarbsOutput(val) {
-        document.getElementById('carbsOutput').textContent = val;
-    }
-    function updateCookTimeOutput(val) {
-        document.getElementById('cookTimeOutput').textContent = val;
-    }
-    function updateProteinOutput(val) {
-        document.getElementById('proteinOutput').textContent = val;
-    }
-    function updatePriceOutput(val) {
-        document.getElementById('priceOutput').textContent = val;
-    }
-</script>
 </body>
 </html>

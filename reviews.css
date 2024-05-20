@@ -1,9 +1,60 @@
 /* CSS for a Review page */
+
+body {
+    background-color: #D3E8D1; /* Soft green background */
+    color: #333;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Navbar styling */
+.navbar {
+    background-color: #FFFFFF; /* White background */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px; /* Maintain padding for alignment */
+    border-bottom: 1px solid #E0E0E0;/* Optional: subtle line for separation */
+}
+.navbar-nav input {
+    background-color: #D3E8D1; /* Background color */
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    color: #000;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    margin-right: 20px; /* Space between logo and nav items */
+}
+
+.logoimage {
+    height: 90px; /* Adjust logo size */
+    margin-right: 10px;
+}
+
+/*Navbar links styling*/
+.navbar-nav {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+.nav-link {
+    color: #333;
+    padding: 10px 15px;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
+
 .leave-review-heading {
-    color: #ffffff;
+    color: #33703F; /* Changed color for better visibility */
     font-family: 'Abhaya Libre', serif;
     font-size: 32px;
-    margin-top: 500px;  
+    margin-top: 50px; /* Reduced margin top */
     margin-bottom: 20px;
     text-align: left;
 }
@@ -11,16 +62,16 @@
 .input-container {
     display: flex;
     flex-direction: column;
-    margin-bottom: 15px; 
+    margin-bottom: 15px;
 }
 
 .input-container input,
 .input-container textarea {
-    width: 100%; 
-    padding: 8px 15px; 
+    width: 100%;
+    padding: 8px 15px;
     border: 1px solid #ddd;
     border-radius: 4px;
-    font-size: 18px; 
+    font-size: 18px;
     font-family: 'Abhaya Libre', serif;
 }
 
@@ -35,10 +86,10 @@
     width: 75%;
     margin-left: auto;
     margin-right: auto;
-    display: flex; 
+    display: flex;
     flex-direction: column;
     gap: 15px;
-    align-items: flex-start; 
+    align-items: flex-start;
 }
 
 label {
@@ -47,11 +98,11 @@ label {
 }
 
 select {
-    width: 100%; 
-    padding: 8px 15px; 
+    width: 100%;
+    padding: 8px 15px;
     border: 1px solid #ddd;
     border-radius: 4px;
-    font-size: 18px; 
+    font-size: 18px;
     font-family: 'Abhaya Libre', serif;
 }
 
@@ -61,10 +112,10 @@ select {
 #reviewForm button {
     display: block;
     width: 100%;
-    padding: 8px 15px; 
+    padding: 8px 15px;
     border: 1px solid #ddd;
     border-radius: 4px;
-    font-size: 18px; 
+    font-size: 18px;
     font-family: 'Abhaya Libre', serif;
 }
 
@@ -93,17 +144,17 @@ select {
 
 #reviews {
     margin-top: 30px;
-    max-width: 1000px; 
+    max-width: 1000px;
     width: 75%;
     margin-left: auto;
     margin-right: auto;
 }
 
 #reviews h2 {
-    color: #ffffff; 
+    color: #33703F; /* Changed color for better visibility */
     font-family: 'Abhaya Libre', serif;
-    font-size: 40px; 
-    margin-top: -30px;
+    font-size: 40px;
+    margin-top: 30px; /* Adjusted margin top */
     margin-bottom: 20px;
     text-align: center;
 }
@@ -136,11 +187,11 @@ select {
 }
 
 .review-message {
-    background-color: #dff0d8; 
-    color: #3c763d; 
+    background-color: #dff0d8;
+    color: #3c763d;
     padding: 10px;
     margin-bottom: 20px;
-    border: 1px solid #d6e9c6; 
+    border: 1px solid #d6e9c6;
     border-radius: 4px;
     max-width: 900px;
     width: 75%;
@@ -152,18 +203,18 @@ select {
 /* Alert message at the top */
 .alert-message {
     position: fixed;
-    top: 0;
+    top: 10px; /* Adjusted to avoid overlapping with content */
     left: 50%;
     transform: translateX(-50%);
-    background-color: #dff0d8; 
-    color: #3c763d; 
+    background-color: #dff0d8;
+    color: #3c763d;
     padding: 10px;
-    border: 1px solid #d6e9c6; 
+    border: 1px solid #d6e9c6;
     border-radius: 4px;
     z-index: 1000;
     width: 50%;
     text-align: center;
-    font-size: 30px;
+    font-size: 20px; /* Adjusted font size */
 }
 
 @media (max-width: 768px) {
@@ -183,3 +234,51 @@ select {
         font-size: 20px;
     }
 }
+
+/* Footer styling */
+footer {
+    font-family: 'Open Sans', sans-serif; /* Font */
+    background-color: whitesmoke; /* Background color */
+    color: black; /* Text color */
+    padding: 20px 0; /* Padding */
+    text-align: center; /* Center align text */
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Styling for lists in the footer */
+footer .list-inline {
+    margin-bottom: 20px; /* Bottom margin */
+    padding-left: 0; /* Left padding */
+}
+
+footer .list-inline-item {
+    margin-right: 10px; /* Right margin */
+    display: inline-block; /* Display inline */
+}
+
+footer .list-unstyled {
+    color: black; /* Text color */
+    padding-left: 0; /* Left padding */
+}
+
+footer .list-unstyled a {
+    color: inherit; /* Inherit color */
+    margin: 0 5px; /* Margin */
+}
+
+/* Social media icon styling */
+.fab {
+    padding: 20px; /* Padding */
+    font-size: 30px; /* Font size */
+    width: 50px; /* Width */
+    text-align: center; /* Center align text */
+    text-decoration: none; /* Remove underline */
+}
+
+/* Hover effect for social media icons */
+.fab:hover {
+    opacity: 0.7; /* Opacity on hover */
+}
+
