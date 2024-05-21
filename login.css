@@ -1,60 +1,129 @@
-body, html {
-    background-image: linear-gradient(to right,darkgreen, lightgreen);
+body {
+    background: #D3E8D1 url('images/food.jpeg') no-repeat center center fixed; /* Fallback background color and image */
+    background-size: cover; /* Ensures the background image covers the entire page */
+    color: #333; /* Text color */
+    font-family: 'Open Sans', sans-serif; /* Font */
+}
+
+/* Navbar styling */
+.navbar {
+    background-color: #FFFFFF; /* White background */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px; /* Maintain padding for alignment */
+    border-bottom: 1px solid #E0E0E0; /* Optional: subtle line for separation */
+}
+.navbar-nav input {
+    background-color: #D3E8D1; /* Background color */
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    color: #000;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    margin-right: 20px; /* Space between logo and nav items */
+}
+
+.logoimage {
+    height: 90px; /* Adjust logo size */
+    width: auto;
+    margin-right: 10px;
+}
+
+/* Navbar links styling */
+.navbar-nav {
     display: flex;
     justify-content: center;
     align-items: center;
+    list-style: none;
+}
+.nav-link {
+    color: #333;
+    padding: 10px 15px;
+    text-decoration: none;
 }
 
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+/* Centering the login form */
 .login-container {
-    margin-top: 100px;
-    width: 150%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 56px); /* Full viewport height minus navbar height */
+}
+
+.form-container {
+    width: 100%;
     max-width: 500px;
     padding: 20px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Added shadow */
     border-radius: 10px;
     background-color: #ffffff;
 }
 
-.centered-title {
-    text-align: center;
-    margin-bottom: 20px;
-    color: rgba(117,169,145,1);
-}
-
-.form-container {
-    margin-top: 20px;
-}
-
-.login-form .form-group {
-    margin-bottom: 20px;
-}
-
-.login-form .form-group label {
-    font-weight: bold;
-    color: rgba(117,169,145,1);
-}
-
-.login-form .form-group input {
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid rgba(117,169,145,1);
-}
-
-.login-form .form-group input:hover,
-.login-form .form-group input:focus {
-    border-color: #33703F;
-}
-
 .btn-primary {
-    background-color: rgba(117,169,145,1);
-    border: none;
-    color: #ffffff;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    background-color: rgba(117, 169, 145, 1); /* Soft green button */
+    border: none; /* No border for a cleaner look */
+    color: #ffffff; /* White text for contrast */
+    padding: 10px 20px; /* Padding for comfort */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for hover */
+    display: block; /* Make the button a block element */
+    margin: 0 auto; /* Center align the button */
 }
 
 .btn-primary:hover {
     background-color: #33703F;
+}
+
+/* Footer styling */
+footer {
+    font-family: 'Open Sans', sans-serif; /* Font */
+    background-color: whitesmoke; /* Background color */
+    color: black; /* Text color */
+    padding: 20px 0; /* Padding */
+    text-align: center; /* Center align text */
+}
+
+/* Styling for lists in the footer */
+footer .list-inline {
+    margin-bottom: 20px; /* Bottom margin */
+    padding-left: 0; /* Left padding */
+}
+
+footer .list-inline-item {
+    margin-right: 10px; /* Right margin */
+    display: inline-block; /* Display inline */
+}
+
+footer .list-unstyled {
+    color: black; /* Text color */
+    padding-left: 0; /* Left padding */
+}
+
+footer .list-unstyled a {
+    color: inherit; /* Inherit color */
+    margin: 0 5px; /* Margin */
+}
+
+/* Social media icon styling */
+.fab {
+    padding: 20px; /* Padding */
+    font-size: 30px; /* Font size */
+    width: 50px; /* Width */
+    text-align: center; /* Center align text */
+    text-decoration: none; /* Remove underline */
+}
+
+/* Hover effect for social media icons */
+.fab:hover {
+    opacity: 0.7; /* Opacity on hover */
 }

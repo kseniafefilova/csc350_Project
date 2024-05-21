@@ -1,0 +1,284 @@
+/* CSS for a Review page */
+
+body {
+    background-color: #D3E8D1; /* Soft green background */
+    color: #333;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Navbar styling */
+.navbar {
+    background-color: #FFFFFF; /* White background */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px; /* Maintain padding for alignment */
+    border-bottom: 1px solid #E0E0E0;/* Optional: subtle line for separation */
+}
+.navbar-nav input {
+    background-color: #D3E8D1; /* Background color */
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    color: #000;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    margin-right: 20px; /* Space between logo and nav items */
+}
+
+.logoimage {
+    height: 90px; /* Adjust logo size */
+    margin-right: 10px;
+}
+
+/*Navbar links styling*/
+.navbar-nav {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+.nav-link {
+    color: #333;
+    padding: 10px 15px;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+.leave-review-heading {
+    color: #33703F; /* Changed color for better visibility */
+    font-family: 'Abhaya Libre', serif;
+    font-size: 32px;
+    margin-top: 50px; /* Reduced margin top */
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.input-container input,
+.input-container textarea {
+    width: 100%;
+    padding: 8px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 18px;
+    font-family: 'Abhaya Libre', serif;
+}
+
+#reviewForm {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+label {
+    margin-bottom: 5px;
+    font-family: 'Abhaya Libre', serif;
+}
+
+select {
+    width: 100%;
+    padding: 8px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 18px;
+    font-family: 'Abhaya Libre', serif;
+}
+
+#reviewForm input,
+#reviewForm textarea,
+#reviewForm select,
+#reviewForm button {
+    display: block;
+    width: 100%;
+    padding: 8px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 18px;
+    font-family: 'Abhaya Libre', serif;
+}
+
+#reviewForm input:focus,
+#reviewForm textarea:focus,
+#reviewForm select:focus,
+#reviewForm button:focus {
+    border-color: rgba(117,169,145,1);
+    box-shadow: 0 0 4px rgba(117,169,145,1);
+    outline: none;
+}
+
+#reviewForm button {
+    background-color: rgba(117,169,145,1);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100px;
+    margin: 0 auto;
+}
+
+#reviewForm button:hover {
+    background-color: #33703F;
+}
+
+#reviews {
+    margin-top: 30px;
+    max-width: 1000px;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#reviews h2 {
+    color: #33703F; /* Changed color for better visibility */
+    font-family: 'Abhaya Libre', serif;
+    font-size: 40px;
+    margin-top: 30px; /* Adjusted margin top */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#reviews article {
+    border: 1px solid #33703F;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s ease;
+}
+
+#reviews article:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#reviews h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 24px;
+    color: #33703F;
+    font-family: 'Abhaya Libre', serif;
+}
+
+#reviews small {
+    font-style: italic;
+    color: #33703F;
+}
+
+.review-message {
+    background-color: #dff0d8;
+    color: #3c763d;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #d6e9c6;
+    border-radius: 4px;
+    max-width: 900px;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+/* Alert message at the top */
+.alert-message {
+    position: fixed;
+    top: 10px; /* Adjusted to avoid overlapping with content */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #dff0d8;
+    color: #3c763d;
+    padding: 10px;
+    border: 1px solid #d6e9c6;
+    border-radius: 4px;
+    z-index: 1000;
+    width: 50%;
+    text-align: center;
+    font-size: 20px; /* Adjusted font size */
+}
+
+@media (max-width: 768px) {
+    #reviewForm,
+    #reviews article {
+        padding: 15px;
+    }
+
+    #reviewForm input,
+    #reviewForm textarea,
+    #reviewForm select,
+    #reviewForm button {
+        font-size: 14px;
+    }
+
+    #reviews h3 {
+        font-size: 20px;
+    }
+}
+
+/* Footer styling */
+footer {
+    font-family: 'Open Sans', sans-serif; /* Font */
+    background-color: whitesmoke; /* Background color */
+    color: black; /* Text color */
+    padding: 20px 0; /* Padding */
+    text-align: center; /* Center align text */
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Styling for lists in the footer */
+footer .list-inline {
+    margin-bottom: 20px; /* Bottom margin */
+    padding-left: 0; /* Left padding */
+}
+
+footer .list-inline-item {
+    margin-right: 10px; /* Right margin */
+    display: inline-block; /* Display inline */
+}
+
+footer .list-unstyled {
+    color: black; /* Text color */
+    padding-left: 0; /* Left padding */
+}
+
+footer .list-unstyled a {
+    color: inherit; /* Inherit color */
+    margin: 0 5px; /* Margin */
+}
+
+/* Social media icon styling */
+.fab {
+    padding: 20px; /* Padding */
+    font-size: 30px; /* Font size */
+    width: 50px; /* Width */
+    text-align: center; /* Center align text */
+    text-decoration: none; /* Remove underline */
+}
+
+/* Hover effect for social media icons */
+.fab:hover {
+    opacity: 0.7; /* Opacity on hover */
+}
+

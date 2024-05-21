@@ -1,15 +1,54 @@
 /* Body styling */
 body {
+    background: url('images/food.jpeg') no-repeat center center fixed;
+    background-size: cover; /* Cover the entire page */
+    color: #333; /* Text color */
+    font-family: 'Open Sans', sans-serif; /* Font */
 }
 
 /* Navbar styling */
 .navbar {
+    background-color: #FFFFFF; /* White background */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px; /* Maintain padding for alignment */
+    border-bottom: 1px solid #E0E0E0; /* Optional: subtle line for separation */
+}
+.navbar-nav input {
+    background-color: #D3E8D1; /* Background color */
 }
 
 .navbar-brand {
+    display: flex;
+    align-items: center;
+    color: #000;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    margin-right: 20px; /* Space between logo and nav items */
 }
 
 .logoimage {
+    height: 90px; /* Adjust logo size */
+    width: auto;
+    margin-right: 10px;
+}
+
+/*Navbar links styling*/
+.navbar-nav {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+.nav-link {
+    color: #333;
+    padding: 10px 15px;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
 }
 
 /* Register form container styling */

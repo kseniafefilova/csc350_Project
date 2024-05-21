@@ -4,9 +4,9 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
 $servername = "localhost";
-$username = "floflo";
+$username = "root";
 $password = "";
-$dbname = "CSC350";
+$dbname = "csc350";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
